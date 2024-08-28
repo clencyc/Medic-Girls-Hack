@@ -1,0 +1,53 @@
+.about-us{
+    margin-top: 200px;
+}
+.about-us .column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.about-us .row{
+    display: flex;
+    content: "";
+    clear: both;
+
+}
+
+.about-us .row .column img{
+    width: 80%;
+    border-radius: 200px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+.about-us .column .about-text{
+    max-width: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 25px;
+
+}
+.column .about-text h1{
+    color: #9F2C75;
+    margin-bottom: 50px;
+}
+.column .about-text button{
+    font-size: 25px;
+    height: 60px;
+    width: 300px;
+    border-radius: 50px;
+    background-color: #9F2C75;
+    color: white;
+    border: none;
+    margin-top: 30px;
+}
+.column .about-text .sign-up{
+    text-decoration: none;
+    color: white;
+}
+.column .about-text button:hover{
+    background-color: #D281B5;
+}
