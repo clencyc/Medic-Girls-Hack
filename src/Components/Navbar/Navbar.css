@@ -1,0 +1,144 @@
+.navbar{
+    background-color: #FAEEFA;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    height: 5rem;
+    /* width: 100%; */
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+#logo{
+    text-decoration: none;
+    color: #9F2C75;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+/* .desktopMenu{
+    justify-content: space-between;
+} */
+.desktopMenuListItem{
+    margin: 1rem;
+    cursor: pointer;
+    color: #9F2C75;
+    font-weight: bold;
+
+}
+
+.desktopMenuListItem:hover{
+    color:#f40097;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #f40097;
+    font-weight: bolder;
+}
+
+
+.desktopMenuBtn{
+    background-color:#9F2C75;
+    color: white;
+    font-weight: bolder;
+    border-radius: 60px;
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    justify-content: space-evenly;
+    padding: auto;
+}
+.customLink {
+    color: #9F2C75; 
+    text-decoration: none;
+  }
+  
+  .customLink:hover {
+    color: #f40097;; 
+  }
+  
+  .customLink.active {
+    color: #9F2C75; 
+  }
+
+Link .desktopMenuListItem{
+    text-decoration: none;
+    color: #9F2C75;
+
+}
+.active{
+    color: #9F2C75;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #9F2C75;
+    
+}
+.mobMenu{
+    display: none;
+    /* width: 60px; */
+    color:#9F2C75;
+    font-weight: bold;
+    /* object-fit: cover; */
+    height: 1.8rem;
+    font-size: inherit;
+    cursor: pointer;
+    /* max-width: 40rem; */
+
+
+
+}
+.navMenu{
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background:#FAEEFA;
+    border-radius: 1rem;
+
+
+}
+.listItem{
+    color: #9F2C75;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background: white;
+
+}
+
+@media screen  and (max-width:720px){
+    .mobMenu{
+        display: flex;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+
+    }
+    
+}
+
+@media screen and (max-width: 1500px) {
+    .mobMenu{
+        display: flex;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+
+    }
+   
+    
+}
