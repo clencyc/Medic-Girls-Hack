@@ -1,4 +1,4 @@
-.authContainer-sign{
+.authContainer{
     /* width: 700px; */
     display: flex;
     flex-wrap: wrap;
@@ -11,11 +11,11 @@
    
 }
 
-.authContainer-sign h1{
+.authContainer h1{
     font-size: 30px;
     color: #9F2C75;
 }
-.authContainer-sign .form{
+.authContainer .form{
     color: #9F2C75;
     align-items: center;
     display: flex;
@@ -26,11 +26,11 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 400px;
-    height: 600px;
+    height: 300px;
     padding: 20px;
     justify-content: space-around;
 }
-.authContainer-sign .form input{
+.authContainer .form input{
     /* width: 500px; */
     margin-left: 20px;
     border: none;
@@ -41,7 +41,7 @@
     /* background-color: transparent; */
 
 }
-.authContainer-sign .btn{
+.authContainer .btn{
     width: 100px;
     height: 30px;
     border-radius: 15px;
@@ -50,7 +50,7 @@
     background-color: #9F2C75;
 }
 
-.authContainer-sign .googleButton{
+.authContainer .googleButton{
     width: 200px;
     height: 40px;
     border-radius: 15px;
@@ -58,7 +58,7 @@
     color: #9F2C75;
     background-color: white;
 }
-.authContainer-sign .log{
+.authContainer .log{
     align-items: center;
     margin: auto;
     display: flex;
@@ -67,7 +67,7 @@
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.authContainer-sign .link{
+.authContainer .link{
     color: #9F2C75;
     text-decoration: none;
     margin-left: 20px;

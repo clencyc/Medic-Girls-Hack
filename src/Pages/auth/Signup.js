@@ -48,12 +48,12 @@ function Signup() {
   };
 
   return (
-    <div className='authContainer'>
+    <div className='authContainer-sign'>
       <div className="card">
       <p>{error}</p>
 
       <form onSubmit={submit} className='form'>
-        
+
       <h1>Sign Up</h1>
 
 
@@ -87,7 +87,7 @@ function Signup() {
           <FcGoogle /> Or signup with Google
         </button>
       </form>
-      <p>Already have an account? <Link to="/login">Login</Link></p>
+      <p className='log'>Already have an account? <Link className='link' to="/login">Login</Link></p>
     </div>
 
     </div>

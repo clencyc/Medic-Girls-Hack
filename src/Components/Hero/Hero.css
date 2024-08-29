@@ -1,0 +1,79 @@
+.container-home img{
+    width: 100%;
+}
+.container-home{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+}
+.container-home .herotext{
+    position: absolute;
+    bottom:0;
+    background: rgb(133, 109, 131);
+    background: rgba(104, 24, 107, 0.5);
+    color: white;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+.herotext h1{
+    margin-top: 50%;
+    font-size: 100px;
+}
+.herotext h1 span{
+    color: #F40097;
+    font-size: 150px;
+}
+#home .herotext p {
+    font-size: 70px;
+    font-weight: 100;
+}
+#home .herotext p span{
+    color: #F40097;
+}
+
+
+@media screen  and (max-width:600px){
+    .herotext h1{
+        margin-top: 10%;
+        font-size: 100px;
+    }
+    #home .herotext p {
+        font-size: 30px;
+    }
+
+    
+}
+@media screen and (max-width: 768px) {
+    .herotext h1{
+        margin-top: 15%;
+        font-size: 100px;
+    }
+    #home .herotext p {
+        font-size: 30px;
+    }
+   
+}
+
+
+@media screen and (max-width: 992px) {
+    .herotext h1{
+        margin-top: 15%;
+        font-size: 100px;
+    }
+    #home .herotext p {
+        font-size: 40px;
+    }
+   
+}
+@media screen and (min-width: 1200px) {
+    .herotext h1{
+        margin-top: 30%;
+        font-size: 150px;
+    }
+    #home .herotext p {
+        font-size: 70px;
+    }
+   
+}

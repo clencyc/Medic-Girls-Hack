@@ -1,0 +1,211 @@
+.casestudies .links .nav{
+    align-items: center;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.casestudies .links .nav .casestudylink {
+    color: #9F2C75;
+    font-size: 25px;
+}
+
+.casestudies .links .nav .casestudylink svg{
+    font-size: 20px;
+    color: #9F2C75;
+}
+.userstories{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
+    
+    
+}
+.userstories .card-resource{
+    /* background-color: #E6CB4F; */
+    height: 350px;
+    width: 30%;
+    /* background-color: transparent; */
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.userstories .card-resource .container svg{
+    font-size: 50px;
+    margin: auto;
+    color: #9F2C75;
+
+}
+.userstories .card-resource .container ul svg{
+    font-size: 25px;
+    margin: 10px;
+    color: gold;
+}
+.userstories .card-resource .container p{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+
+}
+.articles{
+    margin-top: 150px;
+}
+.articles h1{
+    align-items: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: #9F2C75;
+}
+
+.article-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
+
+}
+.article-content .card img{
+    border-radius: 0;
+    /* width: 80%; */
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    align-self: flex-start;
+    margin: auto;
+    display: flex;
+    position: absolute;
+}
+.article-content .card {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    /* box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2); */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.article-content .card .container-text{
+    position: absolute;
+    bottom:0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 70%;
+    height: 70%;
+    border-radius: 25px;
+    margin-bottom: 16px;
+    padding: 20px;
+}
+.article-content .card .container-text button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    color: black;
+    background-color: #9F2C75;
+    cursor: pointer;
+}
+.videos{
+    margin-top: 150px;
+}
+.videos h1{
+    align-items: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: #9F2C75;
+}
+.videos .videos-details{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 3em 0 3em 0;
+    margin-top: 20px;
+    
+
+}
+
+.videos .videos-details .card{
+    position: relative;
+
+    /* background-color: #E6CB4F; */
+    height: 300px;
+    width: 400px;
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    /* box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.2); */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+.videos .videos-details .card img{
+    border-radius: 0;
+    /* width: 80%; */
+    border-radius: 20px;
+    height: 300px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    align-self: flex-start;
+    margin: auto;
+    display: flex;
+    position: absolute;
+}
+.videos .videos-details .card .container-text{
+    position: absolute;
+    bottom:0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 83%;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    padding: 20px;
+}
+.join-button{
+    width: 200px;
+    align-items: center;
+    
+}
