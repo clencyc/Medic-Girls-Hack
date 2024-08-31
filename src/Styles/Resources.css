@@ -6,13 +6,13 @@
     margin-top: 100px;
 }
 .casestudies .links .nav .casestudylink {
-    color: #9F2C75;
+    color: #7f7fff;
     font-size: 25px;
 }
 
 .casestudies .links .nav .casestudylink svg{
     font-size: 20px;
-    color: #9F2C75;
+    color: #7f7fff;
 }
 .userstories{
     height: 100%;
@@ -48,7 +48,7 @@
 .userstories .card-resource .container svg{
     font-size: 50px;
     margin: auto;
-    color: #9F2C75;
+    color: #7f7fff;
 
 }
 .userstories .card-resource .container ul svg{
@@ -70,7 +70,7 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    color: #9F2C75;
+    color: #7f7fff;
 }
 
 .article-content{
@@ -133,7 +133,7 @@
     height: 40px;
     border: none;
     color: black;
-    background-color: #9F2C75;
+    background-color: #7f7fff;
     cursor: pointer;
 }
 .videos{
@@ -144,7 +144,7 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    color: #9F2C75;
+    color: #7f7fff;
 }
 .videos .videos-details{
     height: 100%;

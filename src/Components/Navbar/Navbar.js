@@ -15,7 +15,7 @@ function Navbar() {
         <nav className="navbar">
           
             <Link to="/home" id="logo">
-            Ajiri4Her
+            Medic-Locate
             </Link>
             <div className="desktopMenu">
                 <ScrollLink

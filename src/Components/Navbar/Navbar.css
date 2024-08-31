@@ -1,7 +1,7 @@
 .navbar{
-    background-color: #FAEEFA;
+    background-color: #f6ffff;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    height: 5rem;
+    height: 3rem;
     /* width: 100%; */
     max-width: 120rem;
     margin: 0 auto;
@@ -15,7 +15,7 @@
 }
 #logo{
     text-decoration: none;
-    color: #9F2C75;
+    color: #7f7fff;
     font-size: 30px;
     font-weight: bolder;
     font-family:Arial, Helvetica, sans-serif;
@@ -27,21 +27,21 @@
 .desktopMenuListItem{
     margin: 1rem;
     cursor: pointer;
-    color: #9F2C75;
+    color: #7f7fff;
     font-weight: bold;
 
 }
 
 .desktopMenuListItem:hover{
-    color:#f40097;
+    color:#7f7fff;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #f40097;
+    border-bottom: 3px solid #7f7fff;
     font-weight: bolder;
 }
 
 
 .desktopMenuBtn{
-    background-color:#9F2C75;
+    background-color:#7f7fff;
     color: white;
     font-weight: bolder;
     border-radius: 60px;
@@ -54,33 +54,33 @@
     padding: auto;
 }
 .customLink {
-    color: #9F2C75; 
+    color: #7f7fff; 
     text-decoration: none;
   }
   
   .customLink:hover {
-    color: #f40097;; 
+    color: #7f7fff;; 
   }
   
   .customLink.active {
-    color: #9F2C75; 
+    color: #7f7fff; 
   }
 
 Link .desktopMenuListItem{
     text-decoration: none;
-    color: #9F2C75;
+    color: #7f7fff;
 
 }
 .active{
-    color: #9F2C75;
+    color: #7f7fff;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #9F2C75;
+    border-bottom: 3px solid #7f7fff;
     
 }
 .mobMenu{
     display: none;
     /* width: 60px; */
-    color:#9F2C75;
+    color:#7f7fff;
     font-weight: bold;
     /* object-fit: cover; */
     height: 1.8rem;
@@ -107,7 +107,7 @@ Link .desktopMenuListItem{
 
 }
 .listItem{
-    color: #9F2C75;
+    color: #7f7fff;
     padding: 0.5rem 3rem;
     margin: 0.25rem;
     background: white;

@@ -23,29 +23,23 @@ function HowItWorks() {
             <div className="card">
                 {/* <img src={textsms} alt="" /> */}
                 <div className="container">
-                    <h4 id='text'><MdOutlineWork />Career Growth</h4>
-                    <p>Discover a wealth of information on upcoming hackathons, including deadlines, themes, and eligibility criteria. Learn about successful hacks, tips for building winning projects, and essential coding languages.</p>
-
-                    <button className='learn'>RESOURCES</button>
+                    <h4 id='text'><MdOutlineWork />Health Facility Locator</h4>
+                    <button className='learn'>Find</button>
                 </div>
             </div>
             <div className="card">
                 {/* <img src={therapy} alt="" /> */}
                 <div className="container">
-                    <h4 id='text1'><RiCoinsFill />Entrepreneurship</h4>
-                    <p> Access tailored loan options to support your participation in hackathons and fund your innovative projects.
-                        Our partnership with trusted financial institutions ensures that you have the necessary resources to bring your ideas to life.</p>
-                        <button className='learn'>DIAL*384*76717#</button>
+                    <h4 id='text1'><RiCoinsFill />Health Information</h4>
+                    <button className='learn'>Learn More</button>
 
                 </div>
             </div>
             <div className="card">
                 {/* <img src={plan} alt="" /> */}
                 <div className="container">
-                    <h4 id='text2'><IoIosPeople />Connect with Ladies</h4>
-                    <p>Connect with like-minded women who share your passion for technology.
-                         Find the perfect team members to collaborate on your hackathon projects and leverage diverse perspectives.</p>
-                         <button className='learn'>EXPLORE</button>
+                    <h4 id='text2'><IoIosPeople />Community Report</h4>
+                 <button className='learn'>Report</button>
 
                 </div>
             </div>
