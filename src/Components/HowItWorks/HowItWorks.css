@@ -5,7 +5,7 @@
     margin: auto;
     display: flex;
     margin-top: 200px;
-    color: #9F2C75;
+    color: #7f7fff;
 }
 .howitworks p{
     font-size: 20px;
@@ -73,7 +73,7 @@
     align-items: center;
     margin-top: 0px;
     color: black;
-    color: #9F2C75;
+    color: #7f7fff;
     margin-top: 20px;
     /* gap: 0.1em; */
     font-size: 1.5em;
@@ -106,7 +106,7 @@
     border: none;
     color: white;
     /* border-radius: 40px; */
-    background-color: #9F2C75;
+    background-color: #7f7fff;
 }
 .howitworks button {
     justify-content: center;
@@ -124,7 +124,7 @@
     border: none;
     color: white;
     /* border-radius: 40px; */
-    background-color: #9F2C75;
+    background-color: #7f7fff;
     margin-bottom: 50px;
 }
 .howitworks .sign-up{

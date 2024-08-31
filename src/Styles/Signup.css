@@ -13,10 +13,10 @@
 
 .authContainer-sign h1{
     font-size: 30px;
-    color: #9F2C75;
+    color: #7f7fff;
 }
 .authContainer-sign .form{
-    color: #9F2C75;
+    color: #7f7fff;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
     border-radius: 15px;
     border: none;
     color: #FAEEFA;
-    background-color: #9F2C75;
+    background-color: #7f7fff;
 }
 
 .authContainer-sign .googleButton{
@@ -55,7 +55,7 @@
     height: 40px;
     border-radius: 15px;
     border: none;
-    color: #9F2C75;
+    color: #7f7fff;
     background-color: white;
 }
 .authContainer-sign .log{
@@ -68,7 +68,7 @@
     margin-bottom: 20px;
 }
 .authContainer-sign .link{
-    color: #9F2C75;
+    color: #7f7fff;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
