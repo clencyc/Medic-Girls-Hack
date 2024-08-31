@@ -13,9 +13,9 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-          
+
             <Link to="/home" id="logo">
-            Medic-Locate
+                Medic-Locate
             </Link>
             <div className="desktopMenu">
                 <ScrollLink
@@ -53,8 +53,8 @@ function Navbar() {
                 >
                     How We Work
                 </ScrollLink>
-                
-                
+
+
 
 
 
@@ -69,7 +69,7 @@ function Navbar() {
                 >
                     Contact Us
                 </ScrollLink>
-              
+
             </div>
 
             <Link to="/Signup" className="desktoplistItem customLink">
@@ -81,7 +81,7 @@ function Navbar() {
             </div>
             <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
                 <Link activeClass="active" to="/home" className="listItem customLink">Home</Link>
-               
+
 
                 <ScrollLink
                     activeClass="active"
@@ -95,7 +95,7 @@ function Navbar() {
                 >
                     About Us
                 </ScrollLink>
-              
+
 
 
 
@@ -110,6 +110,19 @@ function Navbar() {
                     onClick={() => setShowMenu(false)}
                 >
                     Contact Us
+                </ScrollLink>
+
+                <ScrollLink
+                    activeClass="active"
+                    to="communityreports"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                    className="listItem"
+                    onClick={() => setShowMenu(false)}
+                >
+                    Reports
                 </ScrollLink>
                 <Link activeClass="active" to="/Signup" className="listItem customLink"> Get Started </Link>
             </div>
