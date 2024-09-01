@@ -21,9 +21,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     /* Adjust padding as needed */
-    height: 60px;
+    height: 80px;
     /* Adjust height as needed */
 }
 
@@ -31,6 +30,7 @@
 .desktopMenu {
     display: flex;
     align-items: center;
+    padding:0 20px;
 }
 
 /* Styling for mobile menu icon */
@@ -86,3 +86,27 @@
 }
 
 /* Additional styling as needed */
+#logo{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.navbar-menu desktopMenu{
+    font-size: 20px;
+}
+
+.dropdown-toggle{
+    border-radius: 4px;
+    height: 35px;
+    width: 100px;
+    background-color: #fff;
+}
+.navbar-signup-btn{
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+
+}
