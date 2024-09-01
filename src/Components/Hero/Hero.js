@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import '../Hero/Hero.css';
@@ -12,12 +12,26 @@ const healthFacilities = [
   // Add more facilities as needed
 ];
 
+// Custom hook to handle zooming
+const ZoomToLocation = ({ location }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (location) {
+      map.setView(location, 15); // Zoom level set to 15 for close-up
+    }
+  }, [location, map]);
+
+  return null;
+};
+
 const Hero = () => {
   const { t } = useTranslation();
   const [currentPosition, setCurrentPosition] = useState(null);
   const [nearestFacility, setNearestFacility] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchedLocation, setSearchedLocation] = useState(null);
+  const [geoError, setGeoError] = useState(null);
 
   useEffect(() => {
     // Get current position
@@ -27,12 +41,30 @@ const Hero = () => {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         });
+        setGeoError(null); // Reset error if position is obtained
       },
       (error) => {
-        console.error('Error getting location:', error);
+        handleGeolocationError(error);
       }
     );
   }, []);
+
+  const handleGeolocationError = (error) => {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        setGeoError(t('geoErrorPermissionDenied'));
+        break;
+      case error.POSITION_UNAVAILABLE:
+        setGeoError(t('geoErrorPositionUnavailable'));
+        break;
+      case error.TIMEOUT:
+        setGeoError(t('geoErrorTimeout'));
+        break;
+      default:
+        setGeoError(t('geoErrorUnknown'));
+        break;
+    }
+  };
 
   useEffect(() => {
     if (currentPosition) {
@@ -72,15 +104,39 @@ const Hero = () => {
   };
 
   const handleSearch = () => {
+    if (searchQuery.trim() === '') {
+      alert(t('searchAlert')); // Handle empty search query
+      return;
+    }
+
     // Use a geocoding API to convert searchQuery into coordinates
-    // For demonstration, let's assume a static location for the searched query
-    // Replace this with actual geocoding logic
-    const location = { lat: -1.290, lng: 36.810 }; // Example coordinates
-    setSearchedLocation(location);
+    const apiUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${searchQuery}`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          const location = {
+            lat: parseFloat(data[0].lat),
+            lng: parseFloat(data[0].lon),
+          };
+          setSearchedLocation(location);
+
+          // Zoom into the searched location
+          setCurrentPosition(location);
+        } else {
+          alert(t('noResultsFound'));
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching location data:', error);
+        alert(t('errorFetchingData'));
+      });
   };
 
   return (
     <div className='container-home' id='home'>
+      {geoError && <div className="geo-error">{geoError}</div>}
       <div className='map-container'>
         <MapContainer center={currentPosition || [-1.286389, 36.817223]} zoom={10} style={{ height: '60vh', width: '100%' }}>
           <TileLayer
@@ -89,6 +145,7 @@ const Hero = () => {
           />
           {currentPosition && (
             <>
+              <ZoomToLocation location={currentPosition} />
               <Marker position={[currentPosition.lat, currentPosition.lng]} icon={L.icon({ iconUrl: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' })}>
                 <Popup>
                   {t('kenyaMapPopup')}
@@ -96,7 +153,7 @@ const Hero = () => {
               </Marker>
               {nearestFacility && (
                 <>
-                  <Marker position={[nearestFacility.lat, nearestFacility.lng]} icon={L.icon({ iconUrl: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' })}>
+                  <Marker position={[nearestFacility.lat, nearestFacility.lng]} icon={L.icon({ iconUrl: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png', iconSize: [50, 50] })}>
                     <Popup>
                       {nearestFacility.name} - {nearestFacility.distance.toFixed(2)} km away
                     </Popup>
@@ -106,9 +163,9 @@ const Hero = () => {
               )}
               {searchedLocation && (
                 <>
-                  <Marker position={[searchedLocation.lat, searchedLocation.lng]} icon={L.icon({ iconUrl: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' })}>
+                  <Marker position={[searchedLocation.lat, searchedLocation.lng]} icon={L.icon({ iconUrl: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', iconSize: [50, 50] })}>
                     <Popup>
-                      {t('searchButton')}
+                      {t('searchedLocationPopup')}
                     </Popup>
                   </Marker>
                   <Circle center={[searchedLocation.lat, searchedLocation.lng]} radius={3000} color="green" />
@@ -122,6 +179,7 @@ const Hero = () => {
         <input
           type="text"
           placeholder={t('searchPlaceholder')}
+          aria-label="Search for a location"
           className='search-bar'
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

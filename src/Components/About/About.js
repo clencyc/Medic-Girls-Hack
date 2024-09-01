@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import '../About/About.css'; // Ensure you have created a CSS file for styling
+import '../About/About.css';
+import Guy from '../Assests/guy.jpg';
+import Guy1 from '../Assests/guy1.png';
 
 function About() {
   const { t } = useTranslation();
@@ -22,7 +24,7 @@ function About() {
       <section className="team-section">
         <h2>{t('meetTheTeam')}</h2>
         <div className="team-member">
-          <img src="team-member1.jpg" alt="Team Member 1" className="team-member-img" />
+          <img src={Guy} alt="Team Member 1" className="team-member-img" />
           <div className="team-member-info">
             <h3>{t('teamMember1Name')}</h3>
             <p>{t('teamMember1Role')}</p>
@@ -30,7 +32,7 @@ function About() {
           </div>
         </div>
         <div className="team-member">
-          <img src="team-member2.jpg" alt="Team Member 2" className="team-member-img" />
+          <img src={Guy1} alt="Team Member 2" className="team-member-img" />
           <div className="team-member-info">
             <h3>{t('teamMember2Name')}</h3>
             <p>{t('teamMember2Role')}</p>

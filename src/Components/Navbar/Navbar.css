@@ -62,9 +62,11 @@
 .navbar-item,
 .mobile-item {
     margin: 0 10px;
+    font-size: 20px;
     /* Adjust spacing as needed */
     text-decoration: none;
-    color: #333;
+    color: #4451c5;
+
     /* Adjust text color as needed */
 }
 
@@ -86,3 +88,8 @@
 }
 
 /* Additional styling as needed */
+
+
+#logo {
+    text-decoration: none;
+}

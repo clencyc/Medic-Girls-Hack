@@ -1,24 +1,62 @@
+/* About Page Container */
 .about-container {
-    color: #7f7fff;
+    color: #0f0f0f;
     background-color: #FAEEFA;
-    padding: 20px;
+    padding: 40px;
     font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Header Section */
 .about-header {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.mission-section,
-.team-section,
-.values-section,
-.contact-info {
-    margin-bottom: 20px;
+.about-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-h1,
-h2 {
-    color: #7f7fff;
+.about-header p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    /* Added gap between sections */
+}
+
+.mission-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.mission-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    /* Added gap between sections */
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .team-member {
@@ -28,29 +66,82 @@ h2 {
 }
 
 .team-member-img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-right: 20px;
+    object-fit: cover;
+}
+
+.team-member-info {
+    flex: 1;
 }
 
 .team-member-info h3 {
     margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
-ul {
+.team-member-info p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Values Section */
+.values-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    /* Added gap between sections */
+}
+
+.values-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.values-section ul {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.values-section ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.values-section ul li strong {
+    color: #1e1e1f;
+}
+
+/* Contact Info Section */
+.contact-info {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    /* Added gap between sections */
+}
+
+.contact-info h2 {
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-a {
-    color: #7f7fff;
+.contact-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
-a:hover {
+.contact-info a {
+    color: #111111;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
     text-decoration: underline;
 }
