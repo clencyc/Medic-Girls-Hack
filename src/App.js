@@ -5,7 +5,7 @@ import Login from './Pages/auth/Login';
 import Home from './Pages/Home';
 import Footer from './Components/Footer/Footer';
 import Resources from "./Pages/Resources";
-
+import Communityreports from './Components/Communityreports/Communityreports'
 
 
 
