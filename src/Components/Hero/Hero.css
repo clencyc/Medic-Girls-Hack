@@ -11,7 +11,7 @@
     position: absolute;
     bottom:0;
     background: rgb(133, 109, 131);
-    background: rgba(104, 24, 107, 0.5);
+    background: rgba(105, 186, 252, 0.5);
     color: white;
     width: 50%;
     height: 100%;
@@ -22,7 +22,7 @@
     font-size: 100px;
 }
 .herotext h1 span{
-    color: #F40097;
+    color: #7f7fff;
     font-size: 150px;
 }
 #home .herotext p {
@@ -30,7 +30,7 @@
     font-weight: 100;
 }
 #home .herotext p span{
-    color: #F40097;
+    color: #7f7fff;
 }
 
 

@@ -4,13 +4,14 @@ import { GoogleAuthProvider, getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC7VBJuFcMNlmKFzuQnkirFNHE2pdzq9ik",
-  authDomain: "codequeens-26324.firebaseapp.com",
-  projectId: "codequeens-26324",
-  storageBucket: "codequeens-26324.appspot.com",
-  messagingSenderId: "866339537122",
-  appId: "1:866339537122:web:df6979a1862bc0aee99ebb",
-  measurementId: "G-3E3XZFQBD2"
+  apiKey: "AIzaSyD-Gju33KdfS96cfCwKfW1oqMPjSHJtDDQ",
+  authDomain: "medi-locator-webapp.firebaseapp.com",
+  databaseURL: "https://medi-locator-webapp-default-rtdb.firebaseio.com",
+  projectId: "medi-locator-webapp",
+  storageBucket: "medi-locator-webapp.appspot.com",
+  messagingSenderId: "976883160812",
+  appId: "1:976883160812:web:77480e2a4c2d7b8ccbb7c9",
+  measurementId: "G-L71LCK3Y0S"
 };
 
 const app = initializeApp(firebaseConfig);

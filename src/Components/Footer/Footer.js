@@ -11,7 +11,7 @@ function Footer() {
   <footer>
     <div className='footer'>
         <div className="column">
-          <h2>Ajiri4Her</h2>
+          <h2>MedicLocate</h2>
         </div>
         <div className="column">
           <h4>Resources</h4>
@@ -40,7 +40,7 @@ function Footer() {
           </ul>
         </div>
     </div>
-    <p>&copy; 2024 Ajiri4Her.com</p>
+    <p>&copy; 2024 MedicLocate</p>
   </footer>
   )
 }

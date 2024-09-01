@@ -2,7 +2,7 @@ footer {
     width: 100%;
     background-color: #FAEEFA;
     display: flex;
-    color: #9F2C75;
+    color: #7f7fff;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
@@ -24,7 +24,7 @@ footer {
     margin-top: 70px;
 }
 footer p{
-    color:#9F2C75;
+    color:#7f7fff;
     text-align: center;
     font-size: 15px;
     justify-content: center;
@@ -33,7 +33,7 @@ footer p{
     margin-bottom: 2em;
 }
 .footer .column{
-    color: #9F2C75;
+    color: #7f7fff;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -45,7 +45,7 @@ footer p{
     display: flex;
 }
 .footer .column svg{
-    color: #9F2C75;
+    color: #7f7fff;
     align-items: center;
     font-size: 50px;
     margin-left: 50px;

@@ -73,7 +73,7 @@
 }
 
 .column .about-text h1 {
-    color: #9F2C75;
+    color: #7f7fff;
     margin-bottom: 50px;
 }
 
@@ -82,7 +82,7 @@
     height: 60px;
     width: 300px;
     border-radius: 50px;
-    background-color: #9F2C75;
+    background-color: #7f7fff;
     color: white;
     border: none;
     margin-top: 30px;
@@ -94,5 +94,5 @@
 }
 
 .column .about-text button:hover {
-    background-color: #D281B5;
+    background-color: #7f7fff;
 }
