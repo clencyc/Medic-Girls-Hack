@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../../configs/firebase'; // Adjust the import path as needed
+import { db } from '../../configs/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import './Communityreports.css';
+import { useTranslation } from 'react-i18next';
 
 function Communityreports() {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -12,7 +14,7 @@ function Communityreports() {
     });
 
     const navigate = useNavigate();
-    const reportsCollection = collection(db, 'communityReports'); // Reference to the Firestore collection
+    const reportsCollection = collection(db, 'communityReports');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -24,21 +26,11 @@ function Communityreports() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
-            // Add form data to Firestore
             await addDoc(reportsCollection, formData);
             console.log('Form submitted:', formData);
-
-            // Reset form fields after submission
-            setFormData({
-                name: '',
-                email: '',
-                experience: ''
-            });
-
-            // Optionally, navigate to a thank you page or display a success message
-            navigate('/thank-you'); // Adjust the route as necessary
+            setFormData({ name: '', email: '', experience: '' });
+            navigate('/thank-you');
         } catch (error) {
             console.error('Error adding document: ', error);
         }
@@ -46,12 +38,11 @@ function Communityreports() {
 
     return (
         <div className="community-report">
-            <h1>Community Report</h1>
-            <p>We value your feedback. Please share your experience after using our Health Facility Locator app.</p>
-
+            <h1>{t('communityReport')}</h1>
+            <p>{t('weValueYourFeedback')}</p>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name">{t('name')}:</label>
                     <input
                         type="text"
                         id="name"
@@ -61,9 +52,8 @@ function Communityreports() {
                         required
                     />
                 </div>
-
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">{t('email')}:</label>
                     <input
                         type="email"
                         id="email"
@@ -73,19 +63,17 @@ function Communityreports() {
                         required
                     />
                 </div>
-
                 <div className="form-group">
-                    <label htmlFor="experience">Your Experience:</label>
+                    <label htmlFor="experience">{t('yourExperience')}:</label>
                     <textarea
                         id="experience"
                         name="experience"
                         value={formData.experience}
                         onChange={handleChange}
                         required
-                    ></textarea>
+                    />
                 </div>
-
-                <button type="submit" className="submit-button">Submit Report</button>
+                <button type="submit" className="submit-button">{t('submitReport')}</button>
             </form>
         </div>
     );

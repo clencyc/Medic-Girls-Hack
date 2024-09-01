@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../../Components/HowItWorks/HowItWorks.css';
 import { MdOutlineWork } from "react-icons/md";
 import { RiCoinsFill } from "react-icons/ri";
@@ -7,6 +8,7 @@ import { MdSystemSecurityUpdate } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
 
 function HowItWorks() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     // Function to navigate to the login page when "Learn More" is clicked
@@ -21,37 +23,36 @@ function HowItWorks() {
 
     return (
         <div className='howitworks' id='howitworks'>
-            <h1>How it Works</h1>
+            <h1>{t('howItWorksTitle')}</h1>
             <div className="how-it-works">
                 <div className="card">
                     <div className="container">
-                        <h4 id='text'><MdOutlineWork />Health Facility Locator</h4>
-                        <button className='learn'>Find</button>
+                        <h4 id='text'><MdOutlineWork />{t('healthFacilityLocator')}</h4>
+                        <button className='learn'>{t('find')}</button>
                     </div>
                 </div>
                 <div className="card">
                     <div className="container">
-                        <h4 id='text1'><RiCoinsFill />Health Information</h4>
-                        <button className='learn' onClick={handleLearnMore}>Learn More</button>
+                        <h4 id='text1'><RiCoinsFill />{t('healthInformation')}</h4>
+                        <button className='learn' onClick={handleLearnMore}>{t('learnMore')}</button>
                     </div>
                 </div>
                 <div className="card">
                     <div className="container">
-                        <h4 id='text2'><IoIosPeople />Community Report</h4>
-                        <button className='learn' onClick={handleReport}>Report</button>
+                        <h4 id='text2'><IoIosPeople />{t('communityReport')}</h4>
+                        <button className='learn' onClick={handleReport}>{t('report')}</button>
                     </div>
                 </div>
                 <div className="card">
                     <div className="container">
-                        <h4 id='text3'><MdSystemSecurityUpdate />Event Updates</h4>
-                        <p>Stay informed and connected with our convenient SMS and USSD services.
-                            Receive timely updates on hackathons, loan applications, and team collaborations directly to your mobile device.</p>
-                        <button className='learn'>SUBSCRIBE</button>
+                        <h4 id='text3'><MdSystemSecurityUpdate />{t('eventUpdates')}</h4>
+                        <p>{t('eventUpdatesContent')}</p>
+                        <button className='learn'>{t('subscribe')}</button>
                     </div>
                 </div>
             </div>
             <button className='learn'>
-                <Link className='sign-up' to="/signup">Join Us</Link>
+                <Link className='sign-up' to="/signup">{t('joinUs')}</Link>
             </button>
         </div>
     );

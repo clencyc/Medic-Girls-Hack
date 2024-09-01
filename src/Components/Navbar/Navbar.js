@@ -1,130 +1,147 @@
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import Menu from "@mui/icons-material/Menu";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import '../Navbar/Navbar.css'
-
-// import logo from "../Assets/logo1.png";
-import "./Navbar.css";
+import { useTranslation } from "react-i18next";
+import Menu from "@mui/icons-material/Menu";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import "../Navbar/Navbar.css";
 
 function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
+    const { t, i18n } = useTranslation();
+
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+        setShowMenu(false);
+    };
 
     return (
         <nav className="navbar">
+            <div className="navbar-container">
+                <Link to="/home" id="logo" className="navbar-logo">
+                    Medic-Locate
+                </Link>
 
-            <Link to="/home" id="logo">
-                Medic-Locate
-            </Link>
-            <div className="desktopMenu">
-                <ScrollLink
-                    activeClass="active"
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    className="desktopMenuListItem"
-                >
-                    Home
-                </ScrollLink>
+                {/* Desktop Menu */}
+                <div className="navbar-menu desktopMenu">
+                    <ScrollLink
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className="navbar-item"
+                    >
+                        {t('home')}
+                    </ScrollLink>
 
+                    <ScrollLink
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className="navbar-item"
+                    >
+                        {t('about')}
+                    </ScrollLink>
 
-                <ScrollLink
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    className="desktopMenuListItem"
-                >
-                    About Us
-                </ScrollLink>
-                <ScrollLink
-                    activeClass="active"
-                    to="howitworks"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    className="desktopMenuListItem"
-                >
-                    How We Work
-                </ScrollLink>
+                    <ScrollLink
+                        to="howitworks"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className="navbar-item"
+                    >
+                        {t('howWeWork')}
+                    </ScrollLink>
 
+                    <ScrollLink
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className="navbar-item"
+                    >
+                        {t('contact')}
+                    </ScrollLink>
 
+                    <div className="dropdown navbar-item">
+                        <button className="dropdown-toggle">
+                            {t('language')}
+                        </button>
+                        <div className="dropdown-menu">
+                            <button onClick={() => changeLanguage('en')}>English</button>
+                            <button onClick={() => changeLanguage('sw')}>Swahili</button>
+                        </div>
+                    </div>
 
+                    <Link to="/signup" className="navbar-item navbar-signup">
+                        <button className="navbar-signup-btn">
+                            <AccountCircleIcon /> {t('getStarted')}
+                        </button>
+                    </Link>
+                </div>
 
+                {/* Mobile Menu Icon */}
+                <div className="navbar-menu-icon" onClick={() => setShowMenu(!showMenu)}>
+                    <Menu />
+                </div>
 
-                <ScrollLink
-                    activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    className="desktopMenuListItem"
-                >
-                    Contact Us
-                </ScrollLink>
+                {/* Mobile Menu */}
+                <div className={`navbar-mobile-menu ${showMenu ? 'active' : ''}`}>
+                    <Link to="/home" className="mobile-item" onClick={() => setShowMenu(false)}>
+                        {t('home')}
+                    </Link>
 
-            </div>
+                    <ScrollLink
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-50}
+                        duration={500}
+                        className="mobile-item"
+                        onClick={() => setShowMenu(false)}
+                    >
+                        {t('about')}
+                    </ScrollLink>
 
-            <Link to="/Signup" className="desktoplistItem customLink">
-                <button className="desktopMenuBtn"> <AccountCircleIcon /> Get Started</button>
-            </Link>
+                    <ScrollLink
+                        to="howitworks"
+                        spy={true}
+                        smooth={true}
+                        offset={-50}
+                        duration={500}
+                        className="mobile-item"
+                        onClick={() => setShowMenu(false)}
+                    >
+                        {t('howWeWork')}
+                    </ScrollLink>
 
-            <div className="mobMenu">
-                <Menu onClick={() => setShowMenu(!showMenu)} />
-            </div>
-            <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
-                <Link activeClass="active" to="/home" className="listItem customLink">Home</Link>
+                    <ScrollLink
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-50}
+                        duration={500}
+                        className="mobile-item"
+                        onClick={() => setShowMenu(false)}
+                    >
+                        {t('contact')}
+                    </ScrollLink>
 
+                    <Link to="/signup" className="mobile-item" onClick={() => setShowMenu(false)}>
+                        {t('getStarted')}
+                    </Link>
 
-                <ScrollLink
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={500}
-                    className="listItem"
-                    onClick={() => setShowMenu(false)}
-                >
-                    About Us
-                </ScrollLink>
-
-
-
-
-                <ScrollLink
-                    activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={500}
-                    className="listItem"
-                    onClick={() => setShowMenu(false)}
-                >
-                    Contact Us
-                </ScrollLink>
-
-                <ScrollLink
-                    activeClass="active"
-                    to="communityreports"
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={500}
-                    className="listItem"
-                    onClick={() => setShowMenu(false)}
-                >
-                    Reports
-                </ScrollLink>
-                <Link activeClass="active" to="/Signup" className="listItem customLink"> Get Started </Link>
+                    <div className="mobile-dropdown">
+                        <button onClick={() => changeLanguage('en')}>English</button>
+                        <button onClick={() => changeLanguage('sw')}>Swahili</button>
+                    </div>
+                </div>
             </div>
         </nav>
     );

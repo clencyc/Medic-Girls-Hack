@@ -1,29 +1,28 @@
-import React from 'react'
+import React from 'react';
 import '../Contact/Contact.css';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className='contactpage'>
-        <h1>Contact us</h1>
+      <h1>{t('contactUs')}</h1>
 
-      
-          <form id='contact-form'  method="POST">
-            <label htmlFor='name'>Full Name</label>
-            <input name='name' placeholder='Enter full name ...' type="text" />
-            <label htmlFor='email'>Email</label>
-            <input name='email' placeholder='Enter email address ...' type="email" />
-            <label htmlFor='name'>Full Name</label>
-            <input name='name' placeholder='Enter full name ...' type="text" />
-            <label htmlFor='message'>Message</label>
-            <textarea name="message"  cols="30" rows="10" placeholder='Enter message ...' required></textarea>
-            <button type='submit'> Send Message</button>
+      <form id='contact-form' method="POST">
+        <label htmlFor='name'>{t('fullName')}</label>
+        <input name='name' placeholder={t('enterFullName')} type="text" />
 
+        <label htmlFor='email'>{t('email')}</label>
+        <input name='email' placeholder={t('enterEmail')} type="email" />
 
-          </form>
-  
+        <label htmlFor='message'>{t('message')}</label>
+        <textarea name="message" cols="30" rows="10" placeholder={t('enterMessage')} required></textarea>
 
-</div>
-  )
+        <button type='submit'>{t('sendMessage')}</button>
+      </form>
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;
