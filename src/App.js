@@ -6,16 +6,14 @@ import Login from './Pages/auth/Login';
 import Home from './Pages/Home';
 import Footer from './Components/Footer/Footer';
 import Resources from "./Pages/Resources";
-import Communityreports from "./Components/Communityreports/Communityreports";
-import i18n from "../src/i18n.js"; // Import i18n
-import { useTranslation } from 'react-i18next';
+import Communityreports from "./Components/Communityreports/Communityreports"; // Import the Communityreports component
 
 function App() {
   const { i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-  };
+};
 
   return (
     <div>
@@ -37,3 +35,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -35,7 +35,7 @@ function Resources() {
         <div className="card-resource">
             <div className="container">
             <AccountCircleIcon />
-                <p>""As a woman in tech, Hackathon Hub has been an absolute game-changer. The resources they provide, from upcoming hackathons to loan assistance, have helped me level up my career."</p>
+                <p>"I was initially unsure about managing my health care needs, but the Health Locator App made it so simple. Its real-time updates and easy navigation are invaluable."</p>
                 <p>~Anonymous</p>
                <ul>
                         <StarIcon />
@@ -51,7 +51,7 @@ function Resources() {
         <div className="card-resource">
             <div className="container">
             <AccountCircleIcon />
-                <p>"I was initially hesitant about participating in hackathons, but Hackathon Hub made it so easy. Their tips and resources were invaluable."</p>
+                <p>"The offline access and multilingual support in the Health Locator App are fantastic. I never miss important updates or struggle with language barriers. It's incredibly convenient to have essential health information at my fingertips."</p>
                 <p>~Anonymous</p>
                <ul>
                         <StarIcon />
@@ -67,7 +67,7 @@ function Resources() {
         <div className="card-resource">
             <div className="container">
             <AccountCircleIcon />
-                <p>"The SMS and USSD services are a fantastic addition to Hackathon Hub. I never miss a deadline or an important announcement. It's so convenient to have everything at my fingertips."</p>
+                <p>"As someone managing health care needs, the Health Locator App has been a game-changer. The real-time updates and community reviews have made navigating health services much easier and more efficient."</p>
                 <p>~Anonymous</p>
                <ul>
                         <StarIcon />
@@ -88,9 +88,10 @@ function Resources() {
         <div className="card">
                 <img src={Article1} alt="" />
                 <div className="container-text">
-                    <h4>FRONTEND DEVELOPMENT</h4>
-                    <p>Read more about Front end development...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <h4>VACCINATION</h4>
+                    <p>Vaccination protects against infectious disease.</p>
+                    {/* <p></p> */}
+                    <a href="https://www.cdc.gov/vaccines/index.html"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -108,9 +109,9 @@ function Resources() {
             <div className="card">
                 <img src={anxiety} alt="" />
                 <div className="container-text">
-                    <h4>BACKEND DEVELOPMENT</h4>
-                    <p>Read about back end development...</p>
-                    <a href="https://magazine.medlineplus.gov/article/anxiety-what-you-need-to-know/"
+                    <h4>MATERNAL</h4>
+                    <p>Maternal health focuses on the care and well-being of women</p>
+                    <a href="https://www.cdc.gov/maternal-infant-health/about/?CDC_AAref_Val=https://www.cdc.gov/reproductivehealth/maternalinfanthealth/index.html"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -130,9 +131,9 @@ function Resources() {
             <div className="card">
                 <img src={autism} alt="" />
                 <div className="container-text">
-                    <h4>UI/UX DESIGN</h4>
-                    <p>Read about UI/UX design...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <h4>CHRONIC DISEASES</h4>
+                    <p>Chronic diseases are long-term conditions like diabetes and heart disease </p>
+                    <a href="https://www.who.int/chronic_conditions/en/"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -149,9 +150,9 @@ function Resources() {
             <div className="card">
                 <img src={ptsd} alt="" />
                 <div className="container-text">
-                    <h4>BLOCK-CHAIN</h4>
-                    <p>Read about Block chain development...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <h4>MENTAL HEALTH</h4>
+                    <p>Mental health involves emotional, psychological, and social well-being</p>
+                    <a href="https://www.who.int/teams/mental-health-and-substance-use"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -168,9 +169,9 @@ function Resources() {
             <div className="card">
                 <img src={adhd} alt="" />
                 <div className="container-text">
-                    <h4>MACHINE LEARNING</h4>
-                    <p>Read about machine learning...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <h4>NUTRITION</h4>
+                    <p>Nutrition focuses on the intake of food and nutrients to support overall health</p>
+                    <a href="https://www.who.int/health-topics/nutrition#tab=tab_1"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -187,9 +188,9 @@ function Resources() {
             <div className="card">
                 <img src={depression} alt="" />
                 <div className="container-text">
-                    <h4>Cyber Security</h4>
-                    <p>Read about Cyber security ...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <h4>PREVENTIVE CARE</h4>
+                    <p>Preventive care includes measures and screenings</p>
+                    <a href="https://www.uspreventiveservicestaskforce.org/uspstf/"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -216,9 +217,9 @@ function Resources() {
         <div className="card">
                 <img src={Video1} alt="" />
                 <div className="container-text">
-                    <h4>HOW TO START CODING</h4>
-                    <p>Watch on where to begin as a techie...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <h4>TIPS TO BETTER HEALTH</h4>
+                    <p>learn to better your health...</p>
+                    <a href="https://www.youtube.com/watch?v=FoRku07ShZM"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -235,9 +236,9 @@ function Resources() {
             <div className="card">
                 <img src={Video1} alt="" />
                 <div className="container-text">
-                    <h4>COMMUNITIES TO JOIN AS A LADY</h4>
+                    <h4>TOP 10 HEALTHY FOOD YOU MUST EAT</h4>
                     <p>Watch on what communities to join...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <a href="https://www.youtube.com/watch?v=F7gDIshc-S0&list=PLpTTF6wMDLR6P3IMIjrraMa4v9f076ZBn&index=1&pp=iAQB"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -254,9 +255,9 @@ function Resources() {
             <div className="card">
                 <img src={Video1} alt="" />
                 <div className="container-text">
-                    <h4>TECHNOLOGIES YOU NEED TO KNOW</h4>
+                    <h4>PERSONAL HYGIENE BASIC</h4>
                     <p>Get equiped with what tech stack you need...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <a href="https://www.youtube.com/watch?v=ea6g6dG2I1I"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
@@ -273,9 +274,9 @@ function Resources() {
             <div className="card">
                 <img src={Video1} alt="" />
                 <div className="container-text">
-                    <h4>CAREER PATHS YOU NEED</h4>
+                    <h4>IMPORTANCE OF VACCINATION</h4>
                     <p>Get equiped with what career paths you need...</p>
-                    <a href="https://www.medicalnewstoday.com/articles/154543"
+                    <a href="https://www.youtube.com/watch?v=5DJD6t2oDkQ"
                     target="_blank"
                      rel="noopener noreferrer"
                      style={{
