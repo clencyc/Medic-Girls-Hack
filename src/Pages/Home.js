@@ -12,7 +12,7 @@ function Home() {
       <About />
       <HowItWorks />
       <Contact />
-
+      
     
     </div>
   )

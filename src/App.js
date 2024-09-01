@@ -7,8 +7,6 @@ import Footer from './Components/Footer/Footer'
 import Resources from "./Pages/Resources";
 
 
-
-
 function App() {
   return (
     <div>
@@ -30,3 +28,5 @@ function App() {
 }
 
 export default App;
+
+
