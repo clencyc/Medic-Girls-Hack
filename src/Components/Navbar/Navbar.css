@@ -1,144 +1,88 @@
-.navbar{
-    background-color: #f6ffff;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    height: 3rem;
-    /* width: 100%; */
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: sticky;
+/* Ensure the navbar stays at the top and spans the full width */
+.navbar {
+    position: fixed;
+    /* Make the navbar fixed */
     top: 0;
-    z-index: 3;
+    /* Align it to the top */
+    left: 0;
+    /* Align it to the left */
+    width: 100%;
+    /* Span the full width */
+    background-color: #fff;
+    /* Optional: Set background color for visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow for a subtle effect */
+    z-index: 1000;
+    /* Ensure it's above other content */
 }
-#logo{
-    text-decoration: none;
-    color: #7f7fff;
-    font-size: 30px;
-    font-weight: bolder;
-    font-family:Arial, Helvetica, sans-serif;
 
-}
-/* .desktopMenu{
+/* Container for navbar contents */
+.navbar-container {
+    display: flex;
     justify-content: space-between;
-} */
-.desktopMenuListItem{
-    margin: 1rem;
-    cursor: pointer;
-    color: #7f7fff;
-    font-weight: bold;
-
+    align-items: center;
+    padding: 0 20px;
+    /* Adjust padding as needed */
+    height: 60px;
+    /* Adjust height as needed */
 }
 
-.desktopMenuListItem:hover{
-    color:#7f7fff;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #7f7fff;
-    font-weight: bolder;
-}
-
-
-.desktopMenuBtn{
-    background-color:#7f7fff;
-    color: white;
-    font-weight: bolder;
-    border-radius: 60px;
-    height: 3rem;
-    width: 8rem;
+/* Styling for desktop menu items */
+.desktopMenu {
     display: flex;
     align-items: center;
-    border: none;
-    justify-content: space-evenly;
-    padding: auto;
 }
-.customLink {
-    color: #7f7fff; 
-    text-decoration: none;
-  }
-  
-  .customLink:hover {
-    color: #7f7fff;; 
-  }
-  
-  .customLink.active {
-    color: #7f7fff; 
-  }
 
-Link .desktopMenuListItem{
-    text-decoration: none;
-    color: #7f7fff;
-
-}
-.active{
-    color: #7f7fff;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #7f7fff;
-    
-}
-.mobMenu{
+/* Styling for mobile menu icon */
+.navbar-menu-icon {
     display: none;
-    /* width: 60px; */
-    color:#7f7fff;
-    font-weight: bold;
-    /* object-fit: cover; */
-    height: 1.8rem;
-    font-size: inherit;
-    cursor: pointer;
-    /* max-width: 40rem; */
-
-
-
+    /* Hidden by default */
 }
-.navMenu{
+
+/* Styling for mobile menu */
+.navbar-mobile-menu {
+    display: none;
+    /* Hidden by default */
     position: absolute;
-    top: 4rem;
-    right: 2rem;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    height: fit-content;
-    min-width: 15rem;
-    background:#FAEEFA;
-    border-radius: 1rem;
-
-
-}
-.listItem{
-    color: #7f7fff;
-    padding: 0.5rem 3rem;
-    margin: 0.25rem;
-    background: white;
-
+    top: 60px;
+    /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for mobile menu */
 }
 
-@media screen  and (max-width:720px){
-    .mobMenu{
-        display: flex;
-    }
-    .desktopMenu{
-        display: none;
-    }
-    .desktopMenuBtn{
-        display: none;
-
-    }
-    
+/* Show the mobile menu when active */
+.navbar-mobile-menu.active {
+    display: block;
 }
 
-@media screen and (max-width: 1500px) {
-    .mobMenu{
-        display: flex;
-    }
-    .desktopMenu{
-        display: none;
-    }
-    .desktopMenuBtn{
-        display: none;
-
-    }
-   
-    
+/* Menu items styling */
+.navbar-item,
+.mobile-item {
+    margin: 0 10px;
+    /* Adjust spacing as needed */
+    text-decoration: none;
+    color: #333;
+    /* Adjust text color as needed */
 }
+
+/* Dropdown menu styling */
+.dropdown-menu,
+.mobile-dropdown {
+    display: none;
+    /* Hidden by default */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile menu icon styling */
+.navbar-menu-icon {
+    display: block;
+    /* Show on mobile */
+}
+
+/* Additional styling as needed */
