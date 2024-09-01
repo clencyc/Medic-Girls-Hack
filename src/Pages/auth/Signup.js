@@ -36,16 +36,26 @@ function Signup() {
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
-      const result = await signInWithPopup(auth, provider);
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      const user = result.user;
+      await signInWithPopup(auth, provider);
       navigate('/login');
     } catch (error) {
       console.error("Error during Google sign-in: ", error);
       setError(`Google sign-in failed: ${error.message}`);
     }
   };
+  // const signInWithGoogle = async () => {
+  //   const provider = new GoogleAuthProvider();
+  //   try {
+  //     const result = await signInWithPopup(auth, provider);
+  //     const credential = GoogleAuthProvider.credentialFromResult(result);
+  //     const token = credential.accessToken;
+  //     const user = result.user;
+  //     navigate('/login');
+  //   } catch (error) {
+  //     console.error("Error during Google sign-in: ", error);
+  //     setError(`Google sign-in failed: ${error.message}`);
+  //   }
+  // };
 
   return (
     <div className='authContainer-sign'>
