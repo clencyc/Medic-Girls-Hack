@@ -186,6 +186,11 @@ const Hero = () => {
         />
         <button className='search-button' onClick={handleSearch}>{t('searchButton')}</button>
       </div>
+      {nearestFacility && currentPosition && (
+        <div className="distance-info">
+          <p>{t('distanceToNearestFacility')} {nearestFacility.distance.toFixed(2)} km</p>
+        </div>
+      )}
     </div>
   );
 };
